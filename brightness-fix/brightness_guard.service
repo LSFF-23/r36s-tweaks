@@ -1,0 +1,11 @@
+[Unit]
+Description=Brightness floor guard
+After=oga_events.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/brightness_guard.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
