@@ -1,0 +1,12 @@
+[Unit]
+Description=Voltage-based LED warning
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/voltage_led_warning.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
